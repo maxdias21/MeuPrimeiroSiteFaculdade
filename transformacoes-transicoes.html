@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformações e Transições</title>
+
+  <style>
+    .box {
+      background-color: red;
+      width: 200px;
+      height:200px;
+      transition: transform 10.5s;
+      margin-bottom: 400px;
+    }
+
+    /* Mover a caixa */
+    .translate {
+      transform: translate(50px, 100px);
+    }
+
+    /* Rodar a caixa */
+    .rotate {
+      transform: rotate(45deg);
+      margin-left: 100px;
+    }
+
+    /* Aumenta o tamanho da caixa */
+    .scale {
+      transform: scale(1.5);
+      margin-left: 100px;
+    }
+
+    /* Inclina a caixa */
+    .skew {
+      transform: skew(30deg, 20deg);
+    }
+
+    /* Evento 1 */
+    @keyframes myEvent {
+      from {
+        transform: translate(100px, 200px);
+      }
+
+      to {
+        transform: scale(2.0);
+      }
+
+    }
+
+    .box1 {
+      animation: myEvent 5s ease-in-out infinite;
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      color: black;
+      font-weight: 900;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    /* Fim evento 1 */
+
+    /* Evento 2 */
+    @keyframes myEvent2 {
+      0% {
+        transform: translate(50%);
+        background-color: black;
+      }
+
+      50% {
+        transform: skew(30deg, 20deg);
+        background-color: aqua;
+      }
+
+      100% {
+        transform: skew(0deg);
+      }
+    }
+
+    .box2{
+      animation: myEvent2 5s infinite;
+      width: 100px;
+      height: 100px;
+      color: black;
+      font-weight: 900;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .box2:hover {
+      background-color: white;
+    }
+
+  /* Fim evento 2*/
+
+  /* Dicas */
+  /*
+    linear: A animação tem uma velocidade constante do início ao fim.
+    ease: A animação começa devagar, acelera no meio e desacelera no final (equivalente a ease-in-out).
+    ease-in: A animação começa devagar e depois acelera.
+    ease-out: A animação começa rapidamente e desacelera no final.
+    ease-in-out: A animação começa devagar, acelera no meio e desacelera no final.
+  */
+
+  .box3 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-top:20px;
+    transition: width 2s;
+  }
+
+  .box3:hover {
+    width: 300px;
+  }
+
+  .div1 {
+    transition-timing-function: linear;
+  }
+
+  .div2 {
+    transition-timing-function: ease;
+  }
+
+  .div3 {
+    transition-timing-function: ease-in;
+  }
+
+  .div4 {
+    transition-timing-function: ease-out;
+  }
+
+  .div5 {
+    transition-timing-function: ease-in-out;
+  }
+
+   
+  </style>
+  
+</head>
+<body>
+  <!-- Transições básicas -->
+  <div class="box translate"></div>
+  <div class="box rotate"></div>
+  <div class="box scale"></div>
+  <div class="box skew"></div>
+
+  <div class="box1">Max</div>
+
+  <div class="box2">Max2</div>
+
+  <div class="box3 div1"></div>
+  <div class="box3 div2"></div>
+  <div class="box3 div3"></div>
+  <div class="box3 div4"></div>
+  <div class="box3 div5"></div>
+
+</body>
+</html>

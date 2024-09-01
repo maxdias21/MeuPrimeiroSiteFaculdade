@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Nav */
+
+nav ul {
+  background-color: black;
+  padding: 20px 0 20px 0;
+}
+
+nav ul li{
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul .main-nav {
+  width: 50%;
+  text-align: center;
+}
+
+nav ul .social-media {
+  width: 50%;
+  text-align: center;
+}
+
+nav ul li a {
+  color: white;
+  transition: 0.5s color;
+}
+
+nav ul li a:hover {
+  color: brown;
+}
+
+#index h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2em;
+  animation: EventText 3s ease-in-out infinite;
+  position: relative;
+}
+
+/* Fim Nav */
+
+header h1 {
+  letter-spacing: 1px;
+  font-size: 2.2em;
+}
+
+header p {
+  margin-top: 8px;
+  color: rgba(42, 39, 39, 0.504)
+}
+
+/* Carousel */
+.carousel {
+  height: 400px;
+  position: relative;
+  background-size: cover; /* Faz a imagem cobrir o container */
+  background-position: center; /* Centraliza a imagem dentro do container */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-image: url('./img.png');
+}
+
+.sign {
+  position: absolute;
+}
+
+.right-sign {
+  right: 10px;
+  top: 46%;
+}
+
+.left-sign {
+  left: 10px;
+  top: 46%;
+}
+
+.icon {
+  background-color: rgb(167, 159, 159);
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Fim Carousel */
+
+/* Footer */
+
+.container-footer {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0 20px 0;
+  color: white;
+}
+
+/* Fim Footer */
+
+/* Form */
+
+#contato label {
+  display: block;
+}
+
+#contato input, #contato textarea,#contato button {
+  display: block;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+#contato button[type='submit'] {
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgb(157, 38, 38);
+  padding: 10px 0 10px 0;
+  transition: 0.3s background-color;
+}
+
+#contato button[type='submit']:hover {
+  background-color: rgb(75, 14, 14);
+  color: white;
+}
+
+#contato input:focus,#contato textarea:focus,#contato button:focus {
+  border: 2px solid green;
+  outline: none;
+}
+
+#contato>.container-form {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Fim Form */
+
+/* Sobre */
+
+#sobre>.container {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#sobre .container h2 {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#sobre .container p {
+  text-align: justify;
+  width: 80%;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Fim Sobre */
+
+@media only screen and (max-width: 768px) {
+  nav ul .social-media {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #contato input,textarea, label {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #contato input, textarea {
+    margin-bottom: 20px;
+  }
+
+  nav ul .main-nav {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@keyframes EventText {
+  0% {
+    color: rgb(73, 61, 120);
+  }
+
+  50% {
+    color: red;
+  }
+
+  100%{
+    color: green;
+  }
+}
